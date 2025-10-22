@@ -11,7 +11,7 @@ $comment = new Comment();
 require_login();
 $auth->check_session();
 
-$current_user = get_current_user();
+$current_user = get_current_user_data();
 
 $comment_id = (int)($_GET['id'] ?? 0);
 if (!$comment_id) {

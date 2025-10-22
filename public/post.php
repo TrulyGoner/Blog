@@ -300,6 +300,7 @@ $csrf_token = generate_csrf_token();
             
             const formData = new FormData();
             formData.append('action', 'toggle_reaction');
+            formData.append('post_id', <?php echo $post_id; ?>);
             formData.append('reaction_type', type);
             formData.append('csrf_token', '<?php echo $csrf_token; ?>');
             
